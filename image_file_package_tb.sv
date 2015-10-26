@@ -13,16 +13,37 @@ module image_file_package_tb;
 
 import ImageFilePkg::*;
 
-ImageFileClass afile	= new("E:/work/video_process_module/image_file_class/tmp.txt");
+ImageFileClass afile	= new("D:/work/github/file-class-package/tmp.txt");
 
 int line [$];
 
 initial begin
     $display("%s",afile.path);
-    afile.read_file_curr_line(line);
+    
+    
+    afile.read_file_curr_line(line);		//第一行
+    $stop;
+    afile.read_file_curr_line(line);		//第二行 
+    $stop;
+    
+    
+    
     afile.close_image_file;
+    
+    
     $display("-------->> %d",line.size());
 end
 
 endmodule
+
+always@(posedge de)
+	afile.read_file_curr_line(line);
+	
+	
+always@(posedge pclk)
+	data	<= line[II];
+	___________________________
+___/                           \_______
+   DATAn-------------------DATAn
+	
 

@@ -66,8 +66,8 @@ class ImageFileClass;
 	    tmp_handle= $fopen(tmp_path,"r");
 	    while( ($fscanf(tmp_handle,"%d ",line[II])) != -1)begin
 		//while( ($sscanf(curr_string,"%d ",line[II])) != -1)begin
-			$display("NUM: %d -->> %d",II,line[II]);
-			$stop;
+			//$display("NUM: %d -->> %d",II,line[II]);
+			//$stop;
 			p1[II]	= line[II]>>(2*pesize);
 			p2[II]	= (line[II]>>pesize)%(2**pesize);
 			p3[II]	= line[II] % (2**pesize);
