@@ -5,7 +5,7 @@ ______________  \/  \/ | \/ | ______________
 --Module Name:  image_file_package_tb.sv
 --Project Name: GitHub
 --Data modified: 2015-10-26 12:28:12 +0800
---author:Young-吴明
+--author:Young-脦芒脙梅
 --E-mail: wmy367@Gmail.com
 ****************************************/
 `timescale 1ns/1ps
@@ -21,9 +21,9 @@ initial begin
     $display("%s",afile.path);
     
     
-    afile.read_file_curr_line(line);		//第一行
+    afile.read_file_curr_line(line);		//碌脷脪禄脨脨
     $stop;
-    afile.read_file_curr_line(line);		//第二行 
+    afile.read_file_curr_line(line);		//碌脷露镁脨脨 
     $stop;
     
     
@@ -42,8 +42,9 @@ always@(posedge de)
 	
 always@(posedge pclk)
 	data	<= line[II];
-	___________________________
-___/                           \_______
+/*
+    __________________________
+___/                          \_______
    DATAn-------------------DATAn
 	
-
+*/
